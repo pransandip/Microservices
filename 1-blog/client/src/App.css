@@ -1,0 +1,31 @@
+body {
+    color: white;
+    background-color: #282c34;
+}
+
+label {
+    color: rgba(26, 227, 238, 0.953);
+}
+
+input {
+    margin: 10px 0px 10px;
+}
+
+h3 {
+    color: rgba(0, 0, 0, 0.953);
+    text-align: center;
+}
+
+hr {
+    color: rgba(0, 0, 0, 0.953);
+}
+
+p {
+    color: black;
+    margin-bottom: 0px;
+    font-size: 12px;
+}
+
+li {
+    color: black;
+}
