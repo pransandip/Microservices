@@ -1,30 +1,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: auth-depl
+  name: auth-mongo-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: auth
+      app: auth-mongo
   template:
     metadata:
       labels:
-        app: auth
+        app: auth-mongo
     spec:
       containers:
-        - name: auth
-          image: us.gcr.io/ticketing-dev-375414/auth
+        - name: auth-mongo
+          image: mongo
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: auth-srv
+  name: auth-mongo-srv
 spec:
   selector:
-    app: auth
+    app: auth-mongo
   ports: 
-    - name: auth
+    - name: db  
       protocol: TCP
-      port: 3000
-      targetPort: 3000
+      port: 27017
+      targetPort: 27017
